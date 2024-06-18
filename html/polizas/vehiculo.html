@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Gestion Vehiculo</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+    .form-container {
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 720px;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+    }
+    input[type="text"], select, .input-text {
+        width: 48%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .button-container {
+        margin-top: 20px;
+        text-align: right;
+    }
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .blue-button {
+        background-color: #17a2b8;
+    }
+    .blue-button:hover {
+        background-color: #138496;
+    }
+    .red-button {
+        background-color: #dc3545;
+    }
+    .red-button:hover {
+        background-color: #c82333;
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="form-container">
+    <h2>Gestion Vehiculo</h2>
+    
+    <div class="form-group">
+        <label for="direccionCobro">Placa</label>
+        <input type="text" class="input-text" id="direccionCobro" placeholder="Coloque Nro de Placa">
+    </div>
+    <div class="form-group">
+        <label for="direccionCobro">Motor</label>
+        <input type="text" class="input-text" id="direccionCobro" placeholder="Coloque Nro de Motor">
+    </div>
+    <div class="form-group">
+        <label for="direccionCobro">Chasis</label>
+        <input type="text" class="input-text" id="direccionCobro" placeholder="Coloque Nro de Chasis">
+    </div>
+    <div class="form-group">
+        <label for="direccionCobro">Matricula</label>
+        <input type="text" class="input-text" id="direccionCobro" placeholder="Coloque Nro de Matricula">
+    </div>
+      <div class="form-group">
+        <label for="direccionCobro">Valor Comercial</label>
+        <input type="text" class="input-text" id="direccionCobro" placeholder="Coloque Valor">
+    </div>
+      <div class="form-group">
+        <label for="direccionCobro">Asientos</label>
+        <input type="text" class="input-text" id="direccionCobro" placeholder="Coloque Cantidad de Asientos">
+    </div>
+    <div class="form-group">
+        <label for="direccionCobro">Marca</label>
+        <select>
+            <option>Kia </option>
+            <option>susuki</option>
+            <option>Mitsubishi </option>
+           
+        </select>
+    </div>
+      <div class="form-group">
+        <label for="direccionCobro">Modelo</label>
+        <select>
+            <option> Picanto</option>
+            <option> Baleno</option>
+            <option> lancer</option>
+           
+        </select>
+    </div>
+     <div class="form-group">
+        <label for="direccionCobro">Color</label>
+        <select>
+            <option>Blanco</option>
+            <option>Rojo</option>
+            <option>Azul</option>
+           
+        </select>
+    </div>
+     <div class="form-group">
+        <label for="direccionCobro">Año</label>
+        <select>
+            <option>2021</option>
+            <option>2022</option>
+            <option>2023</option>
+            <option>2024</option>
+           
+        </select>
+    </div>
+    
+    <div class="button-container">
+        <button id="accederButton" class="blue-button">Nuevo</button>
+        <button id="accederButton2" class="blue-button">Guardar</button>
+        <button id="accederButton3" class="red-button">Cancelar</button>
+    </div>
+</div>
+
+</body>
+<script>
+    document.getElementById("accederButton2").addEventListener("click", function (event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "/html/gestionarCliente.html";
+    });
+    document.getElementById("accederButton").addEventListener("click", function (event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "/html/polizas/pagoPolizas.html";
+    });
+    document.getElementById("accederButton3").addEventListener("click", function (event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "/html/polizas/GestionarPoliza.html";
+    });
+</script>
+</html>

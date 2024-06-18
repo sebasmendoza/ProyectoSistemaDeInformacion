@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        .form-container {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-header">FORMULARIO DE PAÍSES EN CONVENIO</div>
+        <div class="form-group">
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais">
+        </div>
+        <div class="form-group">
+            <label for="nacionalidad">Nacionalidad:</label>
+            <input type="text" id="nacionalidad" name="nacionalidad">
+        </div>
+        <div class="form-header">FORMULARIO TIPO DE DOCUMENTO</div>
+        <div class="form-group">
+            <label for="documento">Documento:</label>
+            <input type="text" id="documento" name="documento">
+        </div>
+        <div class="form-header">FORMULARIO DE EMPRESAS</div>
+        <div class="form-group">
+            <label for="EMPRESAS">Nombre de la empresa:</label>
+            <input type="text" id="EMPRESAS" name="EMPRESAS">
+        </div>
+        <div class="form-header">Existe convenio</div>
+        <div class="form-group">
+            <label>
+                <input type="radio" name="convenio" value="si">Sí
+            </label>
+            <label>
+                <input type="radio" name="convenio" value="no">No
+            </label>
+        </div>
+        <div class="form-header">FORMULARIO DE CLAUSULAS</div>
+        <div class="form-group">
+            <label for="clausulas">Clausula:</label>
+            <input type="text" id="clausulas" name="clausulas">
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripcion:</label>
+            <input type="text" id="descripcion" name="descripcion">
+        </div>
+        <div class="form-group">
+            <a href="RegistroDeCliente2.html"><input type="submit" value="Enviar"></a>
+        </div>
+    </div>
+    
+   
+
+    
+</body>
+
+</html>

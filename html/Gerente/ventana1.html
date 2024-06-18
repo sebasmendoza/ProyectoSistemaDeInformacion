@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro del gerente </title>
+</head>
+<style>
+    .form-container {
+        width: 600px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .form-header {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="submit"] {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .form-group input[type="radio"] {
+        margin-right: 5px;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+            max-width: 600px; /* Aumenta este valor según lo necesario */
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+    }
+
+    .form-header {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+    }
+
+    .form-group input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    .form-section {
+        margin-bottom: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="form-header">FORMULARIO DE TIPO DE PROCESO</div>
+        <div class="form-group">
+            <label for="nombre-proceso">Nombre:</label>
+            <input type="text" id="nombre-proceso" name="nombre-proceso">
+        </div>
+        <div class="form-group">
+            <label for="descripcion-proceso">Descripción:</label>
+            <textarea id="descripcion-proceso" name="descripcion-proceso"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="requisitos-proceso">Requisitos:</label>
+            <textarea id="requisitos-proceso" name="requisitos-proceso"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-header">FORMULARIO DE TIPO DE SEGURO</div>
+        <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria">
+        </div>
+        <div class="form-group">
+            <label for="nombre-seguro">Nombre:</label>
+            <input type="text" id="nombre-seguro" name="nombre-seguro">
+        </div>
+        <div class="form-group">
+            <label for="cobertura-base">Cobertura Base:</label>
+            <input type="text" id="cobertura-base" name="cobertura-base">
+        </div>
+        <div class="form-group">
+            <label for="prima-base">Prima Base:</label>
+            <input type="number" id="prima-base" name="prima-base">
+        </div>
+        <div class="form-group">
+            <label for="deducible-base">Deducible Base:</label>
+            <input type="number" id="deducible-base" name="deducible-base">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-header">FORMULARIO DE COBERTURAS</div>
+        <div class="form-group">
+            <label for="nombre-cobertura">Nombre:</label>
+            <input type="text" id="nombre-cobertura" name="nombre-cobertura">
+        </div>
+        <div class="form-group">
+            <label for="descripcion-cobertura">Descripción:</label>
+            <textarea id="descripcion-cobertura" name="descripcion-cobertura"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="monto-maximo">Monto Máximo:</label>
+            <input type="number" id="monto-maximo" name="monto-maximo">
+        </div>
+        <div class="form-group">
+            <label for="deducible-cobertura">Deducible:</label>
+            <input type="number" id="deducible-cobertura" name="deducible-cobertura">
+        </div>
+        <div class="form-group">
+            <label for="prima-cobertura">Prima:</label>
+            <input type="number" id="prima-cobertura" name="prima-cobertura">
+        </div>
+        <div class="form-group">
+            <label for="exclusiones">Exclusiones:</label>
+            <textarea id="exclusiones" name="exclusiones"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="condiciones-especificas">Condiciones Específicas:</label>
+            <textarea id="condiciones-especificas" name="condiciones-especificas"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-header">FORMULARIO DE REQUISITOS</div>
+        <div class="form-group">
+            <label for="nombre-requisito">Nombre:</label>
+            <input type="text" id="nombre-requisito" name="nombre-requisito">
+        </div>
+        <div class="form-group">
+            <label for="descripcion-requisito">Descripción:</label>
+            <textarea id="descripcion-requisito" name="descripcion-requisito"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="documentacion-necesaria">Documentación Necesaria:</label>
+            <textarea id="documentacion-necesaria" name="documentacion-necesaria"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-header">FORMULARIO DE BENEFICIOS</div>
+        <div class="form-group">
+            <label for="nombre-beneficio">Nombre:</label>
+            <input type="text" id="nombre-beneficio" name="nombre-beneficio">
+        </div>
+        <div class="form-group">
+            <label for="descripcion-beneficio">Descripción:</label>
+            <textarea id="descripcion-beneficio" name="descripcion-beneficio"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="condiciones-beneficio">Condiciones para el Beneficio:</label>
+            <textarea id="condiciones-beneficio" name="condiciones-beneficio"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="monto-beneficio">Monto Beneficio:</label>
+            <input type="number" id="monto-beneficio" name="monto-beneficio">
+        </div>
+        <div class="form-group">
+            <label for="limitaciones-beneficio">Limitaciones del Beneficio:</label>
+            <textarea id="limitaciones-beneficio" name="limitaciones-beneficio"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-header">FORMULARIO TIPO POLIZA</div>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="cobertura-maxima">Cobertura Máxima:</label>
+            <input type="text" id="cobertura-maxima" name="cobertura-maxima">
+        </div>
+        <div class="form-group">
+            <label for="prima-mensual">Prima Mensual:</label>
+            <input type="number" id="prima-mensual" name="prima-mensual">
+        </div>
+        <div class="form-group">
+            <label for="prima-anual">Prima Anual:</label>
+            <input type="number" id="prima-anual" name="prima-anual">
+        </div>
+        <div class="form-group">
+            <label for="deducibles">Deducibles:</label>
+            <input type="text" id="deducibles" name="deducibles">
+        </div>
+        <div class="form-group">
+            <label for="tiempo-vigencia">Tiempo de Vigencia:</label>
+            <input type="text" id="tiempo-vigencia" name="tiempo-vigencia">
+        </div>
+        <div class="form-group">
+            <label for="edad-minima">Edad Mínima:</label>
+            <input type="number" id="edad-minima" name="edad-minima">
+        </div>
+        <div class="form-group">
+            <label for="edad-maxima">Edad Máxima:</label>
+            <input type="number" id="edad-maxima" name="edad-maxima">
+        </div>
+        <div class="form-group">
+            <label for="tipo-seguro">Tipo de Seguro:</label>
+            <input type="text" id="tipo-seguro" name="tipo-seguro">
+        </div>
+        <div class="form-group">
+            <label for="coberturas">Coberturas:</label>
+            <textarea id="coberturas" name="coberturas"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="restricciones">Restricciones:</label>
+            <textarea id="restricciones" name="restricciones"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="beneficios">Beneficios:</label>
+            <textarea id="beneficios" name="beneficios"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="requisitos">Requisitos:</label>
+            <textarea id="requisitos" name="requisitos"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="beneficiarios">Beneficiarios Permitidos:</label>
+            <textarea id="beneficiarios" name="beneficiarios"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Enviar">
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

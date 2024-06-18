@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/56efe1b7af.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/logingerente.css">
+    <title>Login Gerente</title>
+</head>
+<body>
+    
+<button id="salirButton"> salir</button>
+    <section>
+        
+        <div class="contenedor">
+            <div class="formilario">
+                <form action="#">
+                    <h2>Iniciar Sesion</h2>
+
+                    <div class="input-contenedor">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="gmail" required>
+                        <label for="#">Gmail</label>
+                    </div>
+
+                    <div class="input-contenedor">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" required>
+                        <label for="#">Contraseña</label>
+                    </div>
+
+                    <div class="olvidar">
+                        <label for="#">
+                           <input type="checkbox">Recordar   
+                           <a href="#">  Olvide la Contraseña  </a> 
+                        </label>
+                    </div>
+                </form>
+
+                <div >
+                    <button id="accederButton">Acceder</button>
+                    <div class="registrar">
+                        <p>No tengo cuenta <a href="../Gerente/createGerente.html"> Crear cuenta</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <script>
+        document.getElementById("accederButton").addEventListener("click", function() {
+            // Aquí puedes poner la URL a la que quieres redirigir
+            window.location.href = "IndexGerente.html";
+        });
+        document.getElementById("salirButton").addEventListener("click", function() {
+    window.location.href = "../../index.html";  // Cambia esto a la URL deseada
+});
+    </script>
+    
+</body>
+</html>

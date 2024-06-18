@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Aprobación de Póliza</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+    .form-container {
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 720px;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+    }
+    input[type="text"], select, .input-text {
+        width: 48%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .button-container {
+        margin-top: 20px;
+        text-align: right;
+    }
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .blue-button {
+        background-color: #17a2b8;
+    }
+    .blue-button:hover {
+        background-color: #138496;
+    }
+    .red-button {
+        background-color: #dc3545;
+    }
+    .red-button:hover {
+        background-color: #c82333;
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="form-container">
+    <h2>Gestion Tipo de Prima</h2>
+    
+    <div class="form-group">
+        <label for="direccionCobro">Nombre Prima</label>
+        <input type="text" class="input-text" id="direccionCobro" placeholder="Coloque Nombre">
+    </div>
+    <div class="form-group">
+        <label for="direccionCobro">Tipo de Periocidad</label>
+        <select>
+            <option>Anual</option>
+            <option>Mensual</option>
+            <option>Unica</option>
+           
+        </select>
+    </div>
+    <table class="table">
+    <tr>
+        <td>Codigo</td>
+        <td>Nombre</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Prima Anual</td>
+        <td><img src="eliiiiiii.jpg" style="width:30px;heith:30px"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Prima Mensual</td>
+        <td><img src="eliiiiiii.jpg" style="width:30px;heith:30px"></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Prima coste Unico</td>
+        <td><img src="eliiiiiii.jpg" style="width:30px;heith:30px"></td>
+    </tr>
+    
+</table>
+    <div class="button-container">
+        <button id="accederButton" class="blue-button">Nuevo</button>
+        <button id="accederButton2" class="blue-button">Guardar</button>
+        <button id="accederButton3" class="red-button">Cancelar</button>
+    </div>
+</div>
+
+</body>
+<script>
+    document.getElementById("accederButton2").addEventListener("click", function (event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "/html/gestionarCliente.html";
+    });
+    document.getElementById("accederButton").addEventListener("click", function (event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "/html/polizas/pagoPolizas.html";
+    });
+    document.getElementById("accederButton3").addEventListener("click", function (event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "/html/polizas/GestionarPoliza.html";
+    });
+</script>
+</html>

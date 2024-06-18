@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        .form-container {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-header">Formulario Tipo de Póliza</div>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción de Tipo de Póliza:</label>
+                <textarea id="descripcion" name="descripcion"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="coberturaMaxima">Cobertura Máxima:</label>
+                <input type="number" id="coberturaMaxima" name="coberturaMaxima">
+            </div>
+            <div class="form-group">
+                <label for="tipoSeguro">Tipo de Seguro:</label>
+                <select id="tipoSeguro" name="tipoSeguro">
+                    <option value="">Seleccionar...</option>
+                    <option value="">Seguro de vida</option>
+                    <option value="">Seguro de vehiculo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="primaMensual">Prima Mensual:</label>
+                <input type="number" id="primaMensual" name="primaMensual">
+            </div>
+            <div class="form-group">
+                <label for="primaAnual">Prima Anual:</label>
+                <input type="number" id="primaAnual" name="primaAnual">
+            </div>
+            <div class="form-group">
+                <label for="beneficiarios">Beneficiarios Permitidos:</label>
+                <input type="number" id="beneficiarios" name="beneficiarios">
+            </div>
+            <div class="form-group">
+                <label for="tiempoVigencia">Tiempo Vigencia:</label>
+                <input type="text" id="tiempoVigencia" name="tiempoVigencia">
+            </div>
+            <div class="form-group">
+                <label for="edadMaxima">Edad Máxima:</label>
+                <input type="number" id="edadMaxima" name="edadMaxima">
+            </div>
+            <div class="form-group">
+                <label for="edadMinima">Edad Mínima:</label>
+                <input type="number" id="edadMinima" name="edadMinima">
+            </div>
+            <div class="form-group">
+                <label for="deducibles">Deducibles:</label>
+                <textarea id="deducibles" name="deducibles"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="condiciones">Condiciones:</label>
+                <textarea id="condiciones" name="condiciones"></textarea>
+            </div>
+            <div class="form-group">
+                <input id="accederButton" type="submit" value="GUARDAR">
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    document.getElementById("accederButton").addEventListener("click", function(event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "../polizas/PreferenciaPoliza.html";
+    });
+</script>
+
+</html>

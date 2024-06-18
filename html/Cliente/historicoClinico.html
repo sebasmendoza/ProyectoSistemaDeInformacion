@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historico Clínico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .form-header {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="date"],
+        .form-group input[type="tel"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .form-group input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-container">
+            <h1>HISTORICO CLINICO</h1>
+            <form>
+                <div class="form-header">SEGURO</div>
+                <div class="form-group">
+                    <label for="segurosAnteriores">¿Tuvo seguros Anteriores?</label>
+                    <input type="text" id="segurosAnteriores" name="segurosAnteriores">
+                </div>
+                <div class="form-group">
+                    <label for="nombreCompania">Nombre de Compañía</label>
+                    <input type="text" id="nombreCompania" name="nombreCompania">
+                </div>
+                <div class="form-group">
+                    <label for="tiempoServicio">Tiempo de servicio</label>
+                    <input type="text" id="tiempoServicio" name="tiempoServicio">
+                </div>
+                <div class="form-group">
+                    <label for="rechazoSeguro">¿Ha sido usted rechazado alguna vez por un seguro de vida o en alguna renovación o rehabilitación del mismo?</label>
+                    <div class="form-group">
+                        <select>
+                           <option>Renovacion</option>
+                           <option>Seguro de vida</option>
+                           <option>Rehabilitacion</option>
+                           <option>Ninguno</option>
+                           
+                       </select>
+                </div>
+
+                <div class="form-header">SALUD</div>
+                <div class="form-group">
+                    <label for="estatura">Estatura</label>
+                    <input type="number" id="estatura" name="estatura">
+                </div>
+                <div class="form-group">
+                    <label for="pesoActual">Peso Actual</label>
+                    <input type="number" id="pesoActual" name="pesoActual">
+                </div>
+                <div class="form-group">
+                     <select>
+                        <option>Presión arterial</option>
+                        <option>Alta</option>
+                        <option>Baja</option>
+                        <option>Normal</option>
+                        <option>Ignora</option>
+                    </select>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="practicaDeportes">¿Practica Deportes? ¿Cuál? ¿Cuáles?</label>
+                    <input type="text" id="practicaDeportes" name="practicaDeportes">
+                </div>
+                <div class="form-group">
+                    <label for="bebidasAlcoholicas">¿Ingiere bebidas alcohólicas con frecuencia? ¿Qué frecuencia?</label>
+                   <select>
+                        <option>diariamente </option>
+                        <option>casualmente</option>
+                        <option>Nunca</option>
+                       
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fuma">¿Usted fuma? ¿Con qué frecuencia?</label>
+                    <select >
+                    <option>diariamente </option>
+                        <option>casualmente</option>
+                        <option>Nunca</option></select>
+                </div>
+                <div class="form-group">
+                    <label for="discapacidad">¿Presenta alguna discapacidad? ¿Cuál?</label>
+                   <select >
+                    <option>No presento </option>
+                        <option>Ciego</option>
+                        <option>sordo</option> <option>paralitico</option></select>
+                </div>  
+                <div class="form-group">
+                    <label for="intervencionQuirurgica">¿Ha sido sometido a intervención quirúrgica? ¿Cuál?</label>
+                   <select >
+                    <option>No presento </option>
+                        <option>bypass</option>
+                        <option>Vesicula</option> <option>Corazon Abierto</option></select>
+                </div>
+                <div class="form-group">
+                    <label for="enfermedadesHereditarias">¿Presenta enfermedades hereditarias? ¿Cuál?</label>
+                     <select >
+                    <option>No presento </option>
+                        <option>Asma</option>
+                        <option>Diabetes</option> <option>Cirrosis</option></select>
+                </div>
+                <div class="form-group">
+                    <label for="medicamentosPrescripcion">¿Ingiere medicamentos por prescripción?</label>
+                    <select >
+                    <option>No presento </option>
+                        <option>paracetamol</option>
+                        <option>obexol</option> <option>fenternina</option></select>
+                </div>
+                <div class="form-group">
+                    <label for="accidenteTratamiento">¿Ha sufrido algún accidente que haya requerido ser tratado por médico?</label>
+                    <input type="text" id="accidenteTratamiento" name="accidenteTratamiento">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

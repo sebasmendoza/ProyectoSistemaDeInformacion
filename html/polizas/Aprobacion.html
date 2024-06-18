@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Aprobación de Póliza</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+    .form-container {
+        background: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 720px;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+    }
+    input[type="text"], select, .input-text {
+        width: 48%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .button-container {
+        margin-top: 20px;
+        text-align: right;
+    }
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    .blue-button {
+        background-color: #17a2b8;
+    }
+    .blue-button:hover {
+        background-color: #138496;
+    }
+    .red-button {
+        background-color: #dc3545;
+    }
+    .red-button:hover {
+        background-color: #c82333;
+    }
+</style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Aprobación de Póliza</h2>
+    <div class="form-group">
+        <label for="tipoDocumento">Tipo de Documento</label>
+        <select id="tipoDocumento">
+            <option>Carnet de Identidad</option>
+            <option>Licencia de conducir</option>
+            <option>Certificado de nacimiento</option>
+            <option>Declaracion de impuestos</option>
+        </select>
+        <input type="text" class="input-text" id="numeroDocumento" placeholder="Av Cristo Redentor">
+    </div>
+    <div class="form-group">
+        <label for="tipoPoliza">Tipo de Póliza</label>
+        <select id="tipoPoliza">
+            <option>Seguro de Vida</option>
+            <option>Seguro de Salud</option>
+            <option>Seguro de Vehículo</option>
+            <option>Seguro de Hogar</option>
+            <option>Seguro de Viaje</option>
+        </select>
+        <input type="text" class="input-text" id="solicitudPoliza" placeholder="Número de Solicitud">
+    </div>
+    <div class="form-group">
+        <label for="planPagos">Plan de Pagos</label>
+        <select id="planPagos">
+            <option>Mensual</option>
+            <option>Trimestral</option>
+            <option>Semestral</option>
+            <option>Anual</option>
+        </select>
+        <input type="text" class="input-text" id="metodoPago" placeholder="Método de Pago">
+    </div>
+    <div class="form-group">
+        <label for="vigencia">Vigencia</label>
+        <input type="text" class="input-text" id="vigencia" placeholder="Fecha de Vigencia">
+        <label for="primaTotal">Prima Total</label>
+        <input type="text" class="input-text" id="primaTotal" placeholder="Monto de la Prima">
+    </div>
+    <div class="form-group">
+        <label for="direccionCobro">Dirección de Cobro</label>
+        <input type="text" class="input-text" id="direccionCobro" placeholder="Dirección">
+    </div>
+    
+    <div>
+        <h4>Clausulas</h4>
+        <div class="form-group">
+       
+        <textarea class="input-text" style="width:100%;height:200px">
+            
+            PRIMERA: EL OBJETO Y MATERIA DEL CONTRATO
+
+LA ASEGURADORA se compromete a Indemnizar al (los) tercero (s), en términos establecidos en la Póliza por los daños a personas o cosas que se le hayan causado y por los cuales deba responder el Asegurado o el Conductor, como consecuencia de la circulación del vehículo asegurado, limitados a las cantidades máximas previstas en esta Póliza por cada accidente.
+
+SEGUNDA: DEFINICIONES.
+
+EMPRESA DE SEGUROS: Persona Moral que asume los riesgos amparados en la Póliza.
+
+ASEGURADO: Persona Natural o Moral propietaria del vehículo asegurado, que en sus bienes o en sus intereses económicos está expuesta a los riesgos amparados en la Póliza.
+
+TOMADOR: Persona Natural o Moral que obrando por cuenta propia o ajena traslada los riesgos y se obliga al pago de la Prima.
+
+PÓLIZA: Documento escrito donde constan las condiciones del contrato de seguro, el Cuadro Póliza y el Recibo de Prima
+        </textarea>
+    </div>
+    </div>
+     
+    <div class="button-container">
+        <button id="accederButton" class="blue-button">Aprobar Póliza</button>
+        <button id="accederButton2" class="blue-button">Ver Información del Cliente</button>
+        <button id="accederButton3" class="red-button">Cancelar</button>
+    </div>
+</div>
+</body>
+<script>
+    document.getElementById("accederButton2").addEventListener("click", function (event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "/html/gestionarCliente.html";
+    });
+    document.getElementById("accederButton").addEventListener("click", function (event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "/html/polizas/pagoPolizas.html";
+    });
+    document.getElementById("accederButton3").addEventListener("click", function (event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        // Redirige a la nueva URL
+        window.location.href = "/html/polizas/GestionarPoliza.html";
+    });
+</script>
+</html>

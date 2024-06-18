@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Solicitud de Póliza</title>
+    <style>
+         .form-container {
+            width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group.row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .column:last-child {
+            margin-right: 0;
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], input[type="button"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="button"] {
+            background-color: #fcfcfc; /* Fondo blanco */
+            color: #007BFF; /* Texto celeste */
+            border: 2px solid #007BFF; /* Borde celeste */
+            transition: all 0.3s ease; /* Transición suave */
+        }
+
+        input[type="button"]:hover {
+            background-color: #007BFF; /* Fondo celeste al pasar el cursor */
+            color: #ffffff; /* Texto blanco al pasar el cursor */
+            box-shadow: 0 2px 5px rgba(0, 123, 255, 0.5); /* Sombra suave */
+        }
+    </style>
+     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulario de Solicitud de Póliza</h1>
+        <form onsubmit="return false;">
+            <div class="form-group">
+                <label for="solicitud">Codigo del Cliente:</label>
+                <select class="selectpicker" data-show-subtext="true" data-live-search="true">
+    <option value='' selected="true">Busque Codigo o Nombre del Cliente</option>
+    <option value='audi'>4708970-Oscar Lopez Carrillo</option>
+    <option value='bmw'>47089769-Sebastian Villegas</option>
+    <option value='citroen'>45649-Pedro Suarez</option>
+    <option value='fiat'>487949-Mateo Ugartechi</option>
+    
+</select>
+            </div>
+            <div class="form-group">
+                <label for="solicitud">Nro de solicitud:</label>
+                <input type="text" id="solicitud" name="solicitud" value="001" disabled>
+            </div>
+            <div class="form-group row">
+                <div class="column">
+                    <label for="minPrimaMensual">Cobertura maxima</label>
+                    <input type="number" id="minPrimaMensual" name="minPrimaMensual">
+                </div>
+                <div class="form-group">
+                    <label for="tipoSeguro">Tipo de Seguro:</label>
+                    <select id="tipoSeguro" name="tipoSeguro">
+                        <option value="">Seleccionar...</option>
+                        <option value="vida">Seguro de Vida</option>
+                        <option value="vehiculo">Seguro de Vehículo</option>
+                        <option value="vehiculo">Seguro Automotriz</option>
+                        <option value="vehiculo">Seguro de viaje</option>
+                        <option value="vehiculo">Seguro de hogar</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="column">
+                    <label for="minPrimaMensual">Prima </label>
+                   <select>
+                        <option>Unica</option>
+                       <option>Mensual</option>
+                       <option>Semestral</option>
+                       <option>Anual</option>
+                   </select>
+                </div>
+                
+            </div>
+             <div class="form-group row">
+                 
+                 
+                 </div>
+            <div class="form-group row">
+                <div class="column">
+                    <label for="minPrimaMensual">Deducibles</label>
+                    <input type="number" id="minPrimaMensual" name="minPrimaMensual">
+                </div>
+                <div class="column">
+                    <label for="minPrimaMensual">Tiempo de vigencia</label>
+                    <input type="number" id="minPrimaMensual" name="minPrimaMensual">
+                </div>
+                
+            </div>
+            <div class="form-group row">
+                <div class="column">
+                    <label for="minPrimaMensual">Edad maxima</label>
+                    <input type="number" id="minPrimaMensual" name="minPrimaMensual">
+                </div>
+                <div class="column">
+                    <label for="minPrimaMensual">Edad minima</label>
+                    <input type="number" id="minPrimaMensual" name="minPrimaMensual">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="coberturaMaxima">Condiciones:</label>
+                <input type="number" id="coberturaMaxima" name="coberturaMaxima">
+            </div>
+            <div class="form-group">
+                <label for="coberturasIncluidas">Coberturas Incluidas</label>
+                <select id="coberturasIncluidas" name="coberturasIncluidas" multiple>
+                    <option value="">Seleccionar...</option>
+                        <option value="vida">Cobertura por Fallecimiento</option>
+                        <option value="vehiculo">Cobertura por Enfermedades Graves</option>
+                        <option value="vehiculo">Cobertura Médica Básica</option>
+                        <option value="vehiculo">Cobertura de Responsabilidad Civil:</option>
+                        <option value="vehiculo">Cobertura de Medicamentos</option>
+                </select>
+            </div>
+           <div class="form-group">
+                    <label for="tipoSeguro">Beneficios:</label>
+                   <select multiple>
+                        <option>Protección financiera: Ante eventos adversos como accidentes, enfermedades o daños materiales</option>
+                       <option>Cobertura de enfermedades graves: Pago anticipado en caso de enfermedades graves cubiertas por el seguro</option>
+                       <option>Cobertura ante invalidez: Prestación en caso de invalidez total y permanente que impida trabajar</option>
+                       <option>Cobertura por daños a terceros en caso de accidente</option>
+                   </select>
+                </div>
+            <div class="form-group">
+                <label for="requisitosIncluidos">Requisitos Incluidos</label>
+                <select id="requisitosIncluidos" name="requisitosIncluidos" multiple>
+                  <option value="vehiculo">  Edad máxima de cobertura del asegurado, la cual también depende de la compañía y del tipo de seguro</option>
+                      <option value="vehiculo"> Una declaración de salud.</option>
+                          <option value="vehiculo"> Identificación oficial vigente.</option>
+                              <option value="vehiculo">  Acta de nacimiento (cuando se trate de menores de edad, representados por los padres en el ejercicio de la patria potestad).</option>
+                </select>
+            </div>
+            <!-- Añade más campos según necesites -->
+            <div class="form-group row">
+                <input id="accederButton2" type="submit" value="GUARDAR">
+                <input id="accederButton" type="button" value="CANCELAR">
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById("accederButton2").addEventListener("click", function(event) {
+            event.preventDefault(); // Previene el comportamiento por defecto del formulario
+            // Redirige a la nueva URL
+            window.location.href = "/html/polizas/emisionPoliza.html";
+        });
+        document.getElementById("accederButton").addEventListener("click", function(event) {
+            event.preventDefault(); // Previene el comportamiento por defecto del formulario
+            // Redirige a la nueva URL
+            window.location.href = "/html/polizas/GestionarPoliza.html";
+        });
+    </script>
+</body>
+</html>

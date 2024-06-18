@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Emisión de Póliza</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 700px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Emisión de Póliza</h2>
+        <div class="form-group">
+            <label for="tipoDocumento">Tipo de Documento</label>
+            <select id="tipoDocumento" name="tipoDocumento">
+                        <option value="dni">DNI</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="otro">Otro</option>
+                    </select>
+        </div>
+        <div class="form-group">
+            <label for="numeroDocumento">Nro de Documento</label>
+            <input type="text" id="numeroDocumento" placeholder="---">
+        </div>
+        <div class="button-container">
+            <button>Buscar Información Cliente</button>
+
+        </div>
+        <div class="form-group">
+            <label for="tipoPoliza">Tipo de Póliza</label>
+            <select id="tipoSeguro" name="tipoSeguro">
+                        <option value="">Seleccionar...</option>
+                        <option value="vida">Seguro de Vida</option>
+                        <option value="vehiculo">Seguro de Vehículo</option>
+                        <option value="vehiculo">Seguro Automotriz</option>
+                        <option value="vehiculo">Seguro de viaje</option>
+                        <option value="vehiculo">Seguro de hogar</option>
+                    </select>
+        </div>
+        <div class="form-group">
+            <label for="planPagos">Plan de Pagos</label>
+            <select id="planPagos">
+                <option>Mensual</option>
+                <option>Semestral</option>
+                <option>Anual</option>
+                <option>Unico</option>
+                
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="metodoPago">Método de Pago</label>
+            <select id="metodoPago">
+                <option>Efectivo</option>
+                     <option>Tarjeta de Credito</option>
+                          <option>Qr</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="vigencia">Vigencia</label>
+            <input type="text" id="vigencia" placeholder="---">
+        </div>
+        <div class="form-group">
+            <label for="direccionCobro">Dirección de Cobro</label>
+            <input type="text" id="direccionCobro" placeholder="---">
+        </div>
+        <div class="form-group">
+            <label for="primaTotal">Prima Total</label>
+            <input type="text" id="primaTotal" placeholder="---">
+        </div>
+        <div class="button-container">
+            <button id="accederButton2" style="background-color: #28a745;">Emitir Póliza</button>
+            <button id="accederButton" style="background-color: #dc3545;">Cancelar</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("accederButton2").addEventListener("click", function (event) {
+            event.preventDefault(); // Previene el comportamiento por defecto del formulario
+            // Redirige a la nueva URL
+            window.location.href = "/html/polizas/Aprobacion.html";
+        });
+        document.getElementById("accederButton").addEventListener("click", function (event) {
+            event.preventDefault(); // Previene el comportamiento por defecto del formulario
+            // Redirige a la nueva URL
+            window.location.href = "/html/polizas/GestionarPoliza.html";
+        });
+    </script>
+</body>
+
+</html>

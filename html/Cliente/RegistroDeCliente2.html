@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Emisión de Póliza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .form-header {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="date"],
+        .form-group input[type="tel"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .form-group input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-container">
+            <div class="form-header">PROCESO DE EMISIÓN DE POLIZA</div>
+            <div class="form-group">
+                <label for="tipo-poliza">Tipo de Póliza:</label>
+                <select id="tipo-poliza" name="tipo-poliza">
+                    <option value="vida">Vida</option>
+                    <option value="vehiculo">Vehículo</option>
+                    <option value="salud">Salud</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="carnet-cliente">Carnet de Cliente:</label>
+                <input type="text" id="carnet-cliente" name="carnet-cliente">
+            </div>
+            <div class="form-group">
+                <label for="proceso">Proceso:</label>
+                <select id="proceso" name="proceso">
+                    <option value="emision">Emisión</option>
+                    <option value="renovacion">Renovación</option>
+                    <option value="cancelacion">Cancelación</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-container">
+            <h1>DATOS DEL ASEGURADO</h1>
+            <form action="historicoClinico.html">
+                <div class="form-group">
+                    <label for="titular">Titular:</label>
+                    <input type="text" id="titular" name="titular">
+                </div>
+                <div class="form-group">
+                    <label for="dependiente">Dependiente:</label>
+                    <input type="text" id="dependiente" name="dependiente">
+                </div>
+                <div class="form-group">
+                    <label for="empresasAsociadas">En caso de ser dependiente, ingrese las empresas asociadas:</label>
+                    <input type="text" id="empresasAsociadas" name="empresasAsociadas">
+                </div>
+                <div class="form-group">
+                    <label for="apellidoPaterno">Apellido paterno:</label>
+                    <input type="text" id="apellidoPaterno" name="apellidoPaterno">
+                </div>
+                <div class="form-group">
+                    <label for="apellidoMaterno">Apellido materno:</label>
+                    <input type="text" id="apellidoMaterno" name="apellidoMaterno">
+                </div>
+                <div class="form-group">
+                    <label for="apellidoCasada">Apellido de Casada:</label>
+                    <input type="text" id="apellidoCasada" name="apellidoCasada">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombres:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="correoElectronico">Correo electrónico:</label>
+                    <input type="email" id="correoElectronico" name="correoElectronico">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="tipoDocumento">Tipo de Documento:</label>
+                    <select id="tipoDocumento" name="tipoDocumento">
+                        <option value="dni">DNI</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="noDocumento">No. Documento:</label>
+                    <input type="text" id="noDocumento" name="noDocumento">
+                </div>
+                <div class="form-group">
+                    <label for="expedidoEn">Expedido en:</label>
+                    <input type="text" id="expedidoEn" name="expedidoEn">
+                </div>
+                <div class="form-group">
+                    <label for="paisOrigen">País de Origen:</label>
+                    <input type="text" id="paisOrigen" name="paisOrigen">
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidad">Nacionalidad:</label>
+                    <input type="text" id="nacionalidad" name="nacionalidad">
+                </div>
+                <div class="form-group">
+                    <label>Sexo:</label>
+                    <input type="radio" id="sexoF" name="sexo" value="F">
+                    <label for="sexoF">F</label>
+                    <input type="radio" id="sexoM" name="sexo" value="M">
+                    <label for="sexoM">M</label>
+                </div>
+                <div class="form-group">
+                    <label for="estadoCivil">Estado civil:</label>
+                    <select id="estadoCivil" name="estadoCivil">
+                        <option value="soltero">Soltero</option>
+                        <option value="casado">Casado</option>
+                        <option value="viudo">Viudo</option>
+                        <option value="divorciado">Divorciado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="telefonoDomicilio">Teléfono de Domicilio:</label>
+                    <input type="tel" id="telefonoDomicilio" name="telefonoDomicilio">
+                </div>
+                <div class="form-group">
+                    <label for="domicilio">Domicilio:</label>
+                    <input type="text" id="domicilio" name="domicilio">
+                </div>
+                <div class="form-group">
+                    <label for="empresaTrabaja">Empresa en la cual trabaja:</label>
+                    <input type="text" id="empresaTrabaja" name="empresaTrabaja">
+                </div>
+                <div class="form-group">
+                    <label for="cargo">Cargo:</label>
+                    <input type="text" id="cargo" name="cargo">
+                </div>
+                <div class="form-group">
+                    <label for="profesion">Profesión:</label>
+                    <input type="text" id="profesion" name="profesion">
+                </div>
+                <div class="form-group">
+                    <label for="direccionLaboral">Dirección Laboral:</label>
+                    <input type="text" id="direccionLaboral" name="direccionLaboral">
+                </div>
+                <div class="form-group">
+                    <label for="telefonoOficina">Teléfono de Oficina:</label>
+                    <input type="tel" id="telefonoOficina" name="telefonoOficina">
+                </div>
+                <div class="form-group">
+                    <label>Dirección de cobranza:</label>
+                    <input type="radio" id="cobranzaDomiciliaria" name="direccionCobranza" value="domiciliaria">
+                    <label for="cobranzaDomiciliaria">Domiciliaria</label>
+                    <input type="radio" id="cobranzaLaboral" name="direccionCobranza" value="laboral">
+                    <label for="cobranzaLaboral">Laboral</label>
+                    <input type="radio" id="cobranzaOtra" name="direccionCobranza" value="otra">
+                    <label for="cobranzaOtra">Otra</label>
+                </div>
+                <div class="form-group">
+                    <label>Autoriza compartir información con la Compañía:</label>
+                    <input type="radio" id="autorizaSi" name="autoriza" value="si">
+                    <label for="autorizaSi">Sí</label>
+                    <input type="radio" id="autorizaNo" name="autoriza" value="no">
+                    <label for="autorizaNo">No</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
